@@ -1,0 +1,36 @@
+pluginManagement {
+    plugins {
+        id "net.researchgate.release" version "${releasePluginVersion}"
+        id "io.ballerina.plugin" version "${ballerinaGradlePluginVersion}"
+    }
+
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url = 'https://maven.pkg.github.com/ballerina-platform/*'
+            credentials {
+                username System.getenv("packageUser")
+                password System.getenv("packagePAT")
+            }
+        }
+    }
+}
+
+plugins {
+    id "com.gradle.enterprise" version "3.2"
+}
+
+rootProject.name = 'module-ballerinax-azure.openai.responses'
+
+include ':azure.openai.responses-ballerina'
+include ':azure.openai.responses-examples'
+
+project(':azure.openai.responses-ballerina').projectDir = file("ballerina")
+project(':azure.openai.responses-examples').projectDir = file("examples")
+
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+    }
+}
