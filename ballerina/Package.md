@@ -6,11 +6,7 @@
 
 ## Overview
 
-[Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/) provides access to OpenAI's powerful language models including GPT-4o, GPT-4, and o-series models through Microsoft Azure's enterprise-grade infrastructure. It combines OpenAI's advanced AI capabilities with Azure's security, compliance, and regional availability features.
-
-The `ballerinax/azure.openai.responses` package offers functionality to connect and interact with the [Responses API](https://learn.microsoft.com/en-us/rest/api/aifoundry/) of the Azure AI Foundry Models Service. The Responses API is a stateful API that provides a more powerful and flexible way to build AI applications, supporting features like multi-turn conversations, built-in tools (web search, file search, code interpreter), and background processing.
-
-This connector exposes the create model response operation (`POST /responses`).
+The `azure.openai.responses` module is a direct, fully-typed REST connector for the [Azure OpenAI Responses API](https://learn.microsoft.com/en-us/azure/ai-services/openai/) of the Azure AI Foundry Models Service (`POST /responses`). Use it as a standalone client for the stateful Responses API — multi-turn conversations, built-in tools (web search, file search, code interpreter), and background processing — on Azure-hosted models, independent of the `ballerina/ai` agent framework.
 
 ## Setup guide
 
