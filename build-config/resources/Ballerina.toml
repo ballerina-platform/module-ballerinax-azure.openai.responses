@@ -5,7 +5,7 @@ name = "azure.openai.responses"
 version = "@toml.version@"
 license = ["Apache-2.0"]
 authors = ["Ballerina"]
-keywords = ["AI", "Azure", "Azure OpenAI", "Responses", "Vendor/Microsoft"]
+keywords = ["AI", "Azure", "Azure OpenAI", "Responses", "Vendor/Microsoft", "Area/AI & Machine Learning", "Type/Connector", "Name/Azure OpenAI Responses"]
 icon = "icon.png"
 repository = "https://github.com/ballerina-platform/module-ballerinax-azure.openai.responses"
 
